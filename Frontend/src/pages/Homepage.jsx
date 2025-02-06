@@ -2,26 +2,34 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-function Homepage() {
+function Homepage({ handleSearch, searchResults }) {
+  // console.log("handleSearch:", handleSearch); 
+  console.log("searchResults:", searchResults);
+
   const [products, setProducts] = useState([]); // Danh sách sản phẩm
   const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
   const [totalPages, setTotalPages] = useState(1); // Tổng số trang
-
-  // Lấy danh sách sản phẩm theo trang
-  async function getProductList(page = 1) {
+  // Hàm gọi API lấy danh sách sản phẩm
+  async function fetchProducts(page = 1) {
     try {
-      const { data } = await axios.get(`http://localhost:3000/products?page=${page}`);
+      const { data } = await axios.get("http://localhost:3000/products", {
+        params: {
+          page,
+          limit: 6,
+        },
+      });
+
       setProducts(data.products);
-      setTotalPages(Math.ceil(data.total / data.limit)); // Tính tổng số trang từ API
+      setTotalPages(Math.ceil(data.total / data.limit)); // Cập nhật tổng số trang
     } catch (error) {
-      console.error("Error fetching product list:", error);
+      console.error("Lỗi khi lấy danh sách sản phẩm:", error);
       toast.error("Lỗi khi lấy danh sách sản phẩm.");
     }
   }
 
-  // Lấy dữ liệu khi trang thay đổi
+  // Gọi API khi trang thay đổi
   useEffect(() => {
-    getProductList(currentPage);
+    fetchProducts(currentPage);
   }, [currentPage]);
 
   // Chuyển đến trang trước
@@ -39,37 +47,71 @@ function Homepage() {
   }
 
   return (
+    
     <div>
       {/* Hero Banner */}
-      <div className="hero-banner text-white text-center py-5">
+      <section className="hero-banner text-white text-center">
         <img
           src="https://thietkewebchuyen.com/wp-content/uploads/thiet-ke-banner-website-anh-bia-Facebook-shop-quan-ao-nam-nu-4.jpg"
           alt="Hero Banner"
-          className="img-fluid"
+          className="img-fluid w-100"
+          style={{ height: "400px", objectFit: "cover" }}
         />
+      </section>
+      <div className="container my-5">
+        {/* <h2 className="text-center mb-4">Kết quả tìm kiếm</h2> */}
+        {searchResults.length > 0 ? (
+          <div className="row">
+            {searchResults.map((product, index) => (
+              <div className="col-md-4" key={index}>
+                <div className="product-card p-3 border rounded">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="img-fluid mb-3"
+                    style={{ maxHeight: "400px", objectFit: "cover" }}
+                  />
+                  <h5 className="text-center">{product.name}</h5>
+                  <p className="text-center text-danger">{product.price} VND</p>
+                  <a href="#" className="btn btn-primary d-block text-center">Mua</a>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-center">Không tìm thấy sản phẩm nào.</p>
+        )}
       </div>
 
-      {/* Featured Products */}
+      {/* Danh sách sản phẩm */}
       <div className="container my-5" id="shop-now">
         <h2 className="text-center mb-4">Sản Phẩm Mới Nhất</h2>
         <div className="row">
-          {products.map((product, index) => (
-            <div className="col-md-4" key={index}>
-              <div className="product-card p-3 border rounded">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="img-fluid mb-3"
-                  style={{ maxHeight: "400px", objectFit: "cover" }}
-                />
-                <h5 className="text-center">{product.name}</h5>
-                <p className="text-center text-danger">{product.price} VND</p>
-                <a href="#" className="btn btn-primary d-block text-center">
-                  Mua
-                </a>
+          {products.length > 0 ? (
+            products.map((product) => (
+              <div className="col-md-4 mb-4" key={product.id}>
+                <div className="product-card p-3 border rounded">
+                  <a href={`/product/detail/${product.id}`}>
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="img-fluid mb-3"
+                      style={{ maxHeight: "400px", objectFit: "cover" }}
+                    />
+                  </a>
+                  <a href={`/product/detail/${product.id}`} className="btn btn-default text-center">
+                    <h5 className="text-center">{product.name}</h5>
+                  </a>
+                  <p className="text-center text-danger">{product.price} VND</p>
+                  <a href="#" className="btn btn-primary d-block text-center">
+                    Mua
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p className="text-center">Không tìm thấy sản phẩm nào.</p>
+          )}
         </div>
 
         {/* Pagination Controls */}
@@ -79,7 +121,7 @@ function Homepage() {
             onClick={goToPreviousPage}
             disabled={currentPage === 1}
           >
-            Previous
+            Pre
           </button>
           <span className="mx-2">
             {currentPage} / {totalPages}

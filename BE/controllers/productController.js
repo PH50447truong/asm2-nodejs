@@ -4,25 +4,21 @@ console.log(products);
 function getAllProducts(req, res){
     const {
         name,
-        image,
         minPrice,
         maxPrice,
         category,
         page = 1,
-        limit = 9,
+        limit = 6,
     } = req.query;
 
     const minPriceNumber = parseFloat(minPrice) || 0;
     const maxPriceNumber = parseFloat(maxPrice) || Infinity;
-    const pageNumber = parseInt(page, 9) || 1;
-    const limitNumber = parseInt(limit, 9) || 9;
+    const pageNumber = parseInt(page, 6) || 1;
+    const limitNumber = parseInt(limit, 6) || 6;
 
     let fillterProduct = products;
     if(name){
         fillterProduct = fillterProduct.filter((product) => product.name.toLowerCase().includes(name.toLowerCase()))
-    }
-    if(image){
-        fillterProduct = fillterProduct.filter((product) => product.image.toLowerCase().includes(image.toLowerCase()))
     }
     if(category){
         fillterProduct = fillterProduct.filter((product) => product.category.toLowerCase() === category.toLowerCase())
@@ -42,15 +38,14 @@ function getAllProducts(req, res){
 }
 
 function createProduct(req, res){
-    const {name, price, image} = req.body;
-    if (!name || !price || !image){
-        return res.status(400).json({message:"name & price & image is not required"});
+    const {name, price} = req.body;
+    if (!name || !price){
+        return res.status(400).json({message:"name &price is not required"});
     }
 
     const newProduct = {
         id: products.length + 1,
         name,
-        image,
         price,
         description: "",
         category: "",
@@ -77,9 +72,8 @@ function updateProduct(req, res){
     if(!product){
         return res.status(404).json({message: "Product not found"})}
 
-    const {name, price, image} = req.body;
+    const {name, price} = req.body;
     if(name) product.name = name;
-    if(image) product.image = image;
     if(price) product.price = price;
 
     res.json(product)
