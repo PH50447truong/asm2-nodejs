@@ -91,7 +91,7 @@ function Cart() {
           <div className="text-center mt-4">
             <h4 className="fw-bold text-danger">Tổng tiền: {totalPrice.toLocaleString()}₫</h4>
             <button className="btn btn-primary btn-lg mt-2" onClick={goToCheckout}>
-              🛍 Tiến hành thanh toán
+              🛍 Tiến hành thanh toán 
             </button>
           </div>
         </>
