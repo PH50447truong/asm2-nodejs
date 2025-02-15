@@ -2,10 +2,11 @@ export const products = [
   {
     id: 1,
     name: "Áo hoodie Regular Fit",
-    price: 349.000,
+    price: 349000,
     description: "Áo hoodie nam chất liệu cotton thoáng mát, kiểu dáng đơn giản.",
     image: "https://image.hm.com/assets/hm/1b/09/1b093e0f497d594bb4d53d7196520844f2294ec4.jpg?imwidth=1536",
     category: "T-shirt",
+    stock: 10,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const products = [
     description: "Áo bằng vải nỉ nhẹ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ, tay dài với cổ tay và gấu bo gân nổi to bản. Dáng rộng để mặc thoải mái nhưng không bị thụng..",
     image: "https://image.hm.com/assets/hm/5c/8c/5c8c2678da760d6ac7f3748848aaefe579f78a47.jpg?imwidth=384",
     category: "Jacket",
+    stock: 10,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const products = [
     description: "Áo hoodie kéo khoá bằng vải nỉ nhẹ làm từ cotton pha với mặt trái chải xù mềm. Mũ lót vải jersey có dây rút, khoá kéo dọc thân trước, túi chéo hai bên mổ viền và cổ tay và gấu bo gân nổi to bản. Dáng rộng để mặc thoải mái nhưng không bị thụng.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fea%2F2e%2Fea2ecd2d9957bc28d4d4ce38a9474de9fa4310e4.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Jeans",
+    stock: 10,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const products = [
     description: "Áo bằng vải nỉ nhẹ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ, tay dài với cổ tay và gấu bo gân nổi to bản. Dáng rộng để mặc thoải mái nhưng không bị thụng.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F01%2Fa7%2F01a78e83a71e04bd7bb8d74410f48ee1a9b97383.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Shirt",
+    stock: 10,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const products = [
     description: "Áo bằng vải nỉ nhẹ với mặt trái chải xù mềm. Mũ hai lớp, có dây rút, một túi kangaroo và cổ tay và gấu bo gân nổi to bản. Dáng vừa để mặc thoải mái và tạo dáng cổ điển.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F8d%2F02%2F8d02b04735dcc7c251e18173d2cbb2822cbc8e22.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Shorts",
+    stock: 10,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const products = [
     description: "Áo hoodie vải nỉ, form rộng, phù hợp cả nam và nữ.",
     image: "https://product.hstatic.net/200000886795/product/ao-hoodie-unisex-nam-nu-insidemen-ihd002bz__7__ff4a3abea33141b99dd7dd0ad98039ec.jpg",
     category: "Hoodie",
+    stock: 10,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const products = [
     description: "Váy maxi dài, chất liệu nhẹ nhàng, thích hợp đi biển.",
     image: "https://megafashion.vn/data/product/inn1716205275.jpg",
     category: "Dress",
+    stock: 10,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const products = [
     description: "Bộ đồ ngủ cotton mềm mại, thoải mái khi mặc ở nhà.",
     image: "https://aurakorea.com.vn/wp-content/uploads/2024/11/bo-do-ngu-mua-dong-2-1.jpg",
     category: "Sleepwear",
+    stock: 10,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const products = [
     description: "Áo dài Việt Nam truyền thống, phù hợp các dịp lễ.",
     image: "https://product.hstatic.net/200000037048/product/adtt_nha_an_mint_bc8788e0e4204599bd784c1759efc79e_master.jpg",
     category: "Traditional",
+    stock: 10,
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const products = [
     description: "Quần tây dáng đứng, phù hợp phong cách công sở.",
     image: "https://bizweb.dktcdn.net/100/409/545/products/8f02cebe603fac61f52e12.jpg?v=1659689593013",
     category: "Formal",
+    stock: 10,
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ export const products = [
     description: "Áo thun dáng hộp bằng cotton jersey mềm, in hình. Viền gân nổi quanh cổ và vai ráp trễ nhiều.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F92%2F35%2F923536fb2636d22ca0cec600ef7d072c418ed867.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Sweater",
+    stock: 10,
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ export const products = [
     description: "Áo thun dáng ngắn, ôm, bằng cotton jersey mềm, in hình có viền gân nổi quanh cổ và vạt ngang.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F2a%2F4a%2F2a4a8d5a6285afeed7db909c2ea0694d3f1357f0.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Evening Dress",
+    stock: 10,
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ export const products = [
     description: "Áo khoác da thật, thiết kế phong cách và bền bỉ.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fae%2F83%2Fae83a19921ce723ff23ae0c2148fbf41bed412c5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Jacket",
+    stock: 10,
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ export const products = [
     description: "Áo sơ mi kẻ sọc lịch lãm, phù hợp cả đi làm lẫn đi chơi.",
     image: "https://image.hm.com/assets/hm/ac/27/ac2796b99953bbab040fb584a96a77a6bf17d1c5.jpg?imwidth=384",
     category: "Shirt",
+    stock: 10,
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ export const products = [
     description: "Quần legging co giãn tốt, thoải mái cho các bài tập.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Ffc%2F2f%2Ffc2faf895a8349b82509d8b54ccdeb3a483fb775.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Sportswear",
+    stock: 10,
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ export const products = [
     description: "Áo thun polo nam thiết kế đơn giản, sang trọng.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fb6%2F8f%2Fb68f94acef62c3d7c30c11f72af5d6c06ddf558b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "T-shirt",
+    stock: 10,
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ export const products = [
     description: "Váy ngắn nữ tính, chất liệu thoáng mát phù hợp mùa hè.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F61%2F67%2F61670f1b50ebbee319a3b5fe648f11feb0475336.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Skirt",
+    stock: 10,
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ export const products = [
     description: "Áo hoodie thoải mái, dễ phối đồ cho phong cách năng động.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Ff2%2Fd1%2Ff2d160be04e9dc049dd192d96badc35f32902cbe.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Hoodie",
+    stock: 10,
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ export const products = [
     description: "Quần tây nữ lịch lãm, tạo điểm nhấn cho phong cách công sở.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fdf%2Feb%2Fdfeb23ec6b0c1dae002aa77af246c21243bb2c62.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Formal Pants",
+    stock: 10,
   },
   
   {
@@ -159,5 +178,52 @@ export const products = [
     description: "Áo khoác len dày dặn, giữ ấm tốt cho những ngày lạnh.",
     image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F71%2F6a%2F716a55028b923bdae60d7fa81755b1e4084a8d9f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     category: "Cardigan",
+    stock: 10,
+  },
+  {
+    id: 21,
+    name: "Áo hoodie Regular Fit",
+    price: 349000,
+    description: "Áo hoodie nam chất liệu cotton thoáng mát, kiểu dáng đơn giản.",
+    image: "https://image.hm.com/assets/hm/1b/09/1b093e0f497d594bb4d53d7196520844f2294ec4.jpg?imwidth=1536",
+    category: "T-shirt",
+    stock: 10,
+  },
+  {
+    id: 22,
+    name: "Áo nỉ Loose Fit",
+    price: 350000,
+    description: "Áo bằng vải nỉ nhẹ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ, tay dài với cổ tay và gấu bo gân nổi to bản. Dáng rộng để mặc thoải mái nhưng không bị thụng..",
+    image: "https://image.hm.com/assets/hm/5c/8c/5c8c2678da760d6ac7f3748848aaefe579f78a47.jpg?imwidth=384",
+    category: "Jacket",
+    
+    stock: 10,
+  },
+  {
+    id: 23,
+    name: "Áo hoodie kéo khoá Loose Fit",
+    price: 400000,
+    description: "Áo hoodie kéo khoá bằng vải nỉ nhẹ làm từ cotton pha với mặt trái chải xù mềm. Mũ lót vải jersey có dây rút, khoá kéo dọc thân trước, túi chéo hai bên mổ viền và cổ tay và gấu bo gân nổi to bản. Dáng rộng để mặc thoải mái nhưng không bị thụng.",
+    image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fea%2F2e%2Fea2ecd2d9957bc28d4d4ce38a9474de9fa4310e4.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    category: "Jeans",
+    stock: 10,
+  },
+  {
+    id: 24,
+    name: "Áo nỉ Loose Fit",
+    price: 250000,
+    description: "Áo bằng vải nỉ nhẹ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ, tay dài với cổ tay và gấu bo gân nổi to bản. Dáng rộng để mặc thoải mái nhưng không bị thụng.",
+    image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F01%2Fa7%2F01a78e83a71e04bd7bb8d74410f48ee1a9b97383.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    category: "Shirt",
+    stock: 10,
+  },
+  {
+    id: 25,
+    name: "Áo hoodie Regular Fit",
+    price: 200000,
+    description: "Áo bằng vải nỉ nhẹ với mặt trái chải xù mềm. Mũ hai lớp, có dây rút, một túi kangaroo và cổ tay và gấu bo gân nổi to bản. Dáng vừa để mặc thoải mái và tạo dáng cổ điển.",
+    image: "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F8d%2F02%2F8d02b04735dcc7c251e18173d2cbb2822cbc8e22.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    category: "Shorts",
+    stock: 10,
   },
 ];

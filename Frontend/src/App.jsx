@@ -8,6 +8,9 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { useState } from "react";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
+import Orders from "./pages/oder";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -45,6 +48,18 @@ function App() {
     {
       path: "product/detail/:id",
       element: <ProductDetail />,
+    },
+    {
+      path: "cart",
+      element: <Cart />,
+    },
+    {
+      path: "checkout",
+      element: <Checkout />,
+    },
+    {
+      path: "orders",
+      element: <Orders />,
     },
   ];
 
